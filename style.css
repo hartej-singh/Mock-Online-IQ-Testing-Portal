@@ -1,0 +1,233 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html{
+    font-size: 10px;
+    font-family: Verdana, sans-serif;
+}
+.container{
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+/*Header*/
+#header{
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: auto;
+}
+#header .header{
+    min-height: 8vh;
+    background-color: rgba(5, 43, 114, 0.418);
+}
+#header .nav-bar{
+    display: flex;
+    white-space: nowrap;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+    max-width: 1300px;
+    padding: 5px 2.5%;
+    /*padding: 30px 5%;*/
+}
+#header .website-name h1{
+    padding: 10px;
+    white-space: nowrap ;
+    font-size: 3rem;
+    text-transform: uppercase;
+}
+.nav-list{
+    
+    font-size: 2rem;
+    list-style: none;
+}
+.nav-list li{
+    color: black;
+    display: inline-block;
+    padding: 0px 20px;
+}
+.nav-list li a{
+    transition: all 0.3s ease 0s;
+}
+.nav-list li a:hover{
+    color:rgba(237, 100, 111);
+}
+/*End of Header*/
+/*Background section*/
+#background{
+    background-image: url(./images/bg3.jpg);
+    background-size: cover;
+    background-position: top center;
+    position: relative;
+}
+#background::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(to right, #f0f2f0, #000c40);
+    /*background: linear-gradient(to right, #0f2027, #203a43, #2c5364);*/
+    opacity: 0.6;
+    z-index: 2;
+}
+#background .background{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 50px;
+    justify-content: flex-start;
+}
+#background h1{
+    display: block;
+    width: fit-content;
+    font-size: 4rem;
+    position: relative;
+    color: transparent;
+    animation: text_reveal 0.5s ease forwards;
+    animation-delay: 1.5s;
+    z-index: 3;
+}
+#background .background p{
+    font-size: 2rem;
+    z-index: 3;
+}
+#background h1 span{
+    position: absolute;
+    top:0;
+    left: 0;
+    height: 100%;
+    width: 0;
+    background-color: cornflowerblue;
+    animation: text_reveal_box 1s ease;
+    animation-delay: 1s;
+    z-index: 3;
+     
+}
+/*keyframes*/
+@keyframes text_reveal_box{
+    50%{
+        width: 100%;
+        left: 0;
+    }
+    100%{
+        width: 0;
+        left: 100%;
+    }
+}
+@keyframes text_reveal{
+    100%{
+        color: black;
+    }
+}
+/*keyframes*/
+/*End of background section*/
+/*info section*/
+#info .info{
+    flex-direction: column;
+    max-width: 1500px;
+    margin: 0 auto;
+    padding: 100px 0;
+
+}
+#info .info-bottom{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+#info .info-item{
+    flex-basis: 80%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    padding: 30px;
+    border-radius: 10px;
+    background-image: url(./images/info_bg.jpg);
+    background-size: cover;
+    margin: 10px 5%;
+    position: relative;
+    z-index: 1;
+}
+#info .info-item::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    /*background-color: linear-gradient(to right, #0f2027, #203a43, #2c5364);*/
+    background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+    opacity: 0.6;
+    z-index: -1;
+}
+#info .info-bottom .icon{
+    height: 80px;
+    width: 80px;
+    margin-bottom: 20px;
+}
+#info .info-item h2{
+    color: white;
+}
+#info .info-item h3{
+    color: white;
+}
+#info .info-item p{
+    color: white;
+    font-size: 1.5rem;
+}
+#info .info-title{
+    font-size: 4rem;
+    font-weight: 300;
+    color: cornflowerblue;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: .2rem;
+    text-align: center;
+}
+#info .info-top ul{
+    font-size: 1.4rem;
+    margin-top: 5px;
+    line-height: 2.5rem;
+    font-weight: 300;
+    letter-spacing: 0.05rem;
+}
+/*End of info section*/
+/*footer*/
+#footer{
+    background-color: cornflowerblue;
+    opacity: 0.7;
+}
+#footer .footer{
+    min-height: 200px;
+    flex-direction: column;
+    padding-top: 50px;
+    padding-bottom: 10px;
+}
+#footer .website-name h1{
+    white-space: nowrap ;
+    font-size: 3rem;
+    text-transform: uppercase;
+    padding: 10px;
+}
+#footer .social-media-icons{
+    display: flex;
+    margin-bottom: 30px;
+
+}
+/*End of footer*/
+
